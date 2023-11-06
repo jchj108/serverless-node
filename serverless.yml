@@ -1,0 +1,33 @@
+service: serverless-node
+
+frameworkVersion: '3'
+plugins:
+  - serverless-auto-swagger
+  - serverless-prune-plugin
+  - serverless-offline
+
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: ap-northeast-2
+  endpointType: REGIONAL
+  timeout: 30
+
+functions:
+  test:
+    handler: src/functions/hello/handler.hello
+    events:
+      - http:
+          path: /test
+          method: GET
+          swaggerTags: [ 'TEST' ]
+
+package:
+  individually: true
+
+custom:
+  region: ${self:provider.region}
+  prune:
+    automatic: true
+    number: 5
