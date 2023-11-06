@@ -10,6 +10,10 @@ Depending on your preferred package manager, follow the instructions below to de
 
 > **Requirements**: NodeJS `lts/fermium (v.14.15.0)`. If you're using [nvm](https://github.com/nvm-sh/nvm), run `nvm use` to ensure you're using the same Node version in local and in your lambda's runtime.
 
+### COMMAND
+1. npm install -g serverless
+2. sls create --template aws-nodejs-typescript && npm install
+
 ### Using NPM
 
 - Run `npm i` to install the project dependencies
