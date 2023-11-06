@@ -4,7 +4,6 @@
 1. npm install -g serverless
 2. sls create --template aws-nodejs-typescript && npm install
 
-### Using NPM
+### START
 
-- Run `npm i` to install the project dependencies
-- Run `npx sls deploy` to deploy this stack to AWS
+- Run npm debug
